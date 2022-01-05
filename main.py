@@ -1,9 +1,9 @@
+
 import random
 import tkinter as tk
 window=tk.Tk()
 
 
-f=tk.Entry()
 
 a= random.randint(0,101)
 b= random.randint(0,101)
@@ -14,6 +14,7 @@ value1 = tk.Label(text=b)
 value3 = tk.Label(text=c)
 
 
+f = tk.Entry()
 f.pack()
 value1.pack()
 value2.pack()
