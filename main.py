@@ -1,8 +1,6 @@
 import random
 import tkinter as tk
-from tkinter import ttk
-from tkinter.messagebox import askyesno
-import time
+from pathlib import Path
 
 import time as ti
 
@@ -37,7 +35,8 @@ def again():
 
 entry=tk.Entry(window)
 def gameloop():
-
+    with open((Path(__file__).parent / "highscore.txt").resolve(), "r") as f:
+        highscore = f.read()
 
 
     a= random.randint(0,101)
