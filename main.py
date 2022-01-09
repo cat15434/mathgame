@@ -26,6 +26,7 @@ def end():
 #Make Play again button event for yes response
 def again():
     global score
+    entry.config(state="normal")
     score=0
     scoreLabel.config(text="Score:" + str(score))
     window.after(50, yes.destroy)
@@ -107,6 +108,7 @@ def gameloop():
 
 # response for wrong int awnser
         elif f != z:
+
 #import value 6 actions
          global value6
 #create game over label
@@ -127,6 +129,9 @@ def gameloop():
          window.after(50,value2.destroy)
          window.after(50,value3.destroy)
          value6.pack()
+         entry.delete(first=0,last=10)
+         entry.config(state="disabled")
+         entry.unbind('<Return>')
 #print the play again text
          play_again.pack()
 #import no button response
